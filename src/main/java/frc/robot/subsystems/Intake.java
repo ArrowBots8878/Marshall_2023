@@ -21,10 +21,10 @@ public class Intake extends SubsystemBase {
     intake.burnFlash();
     }
     public void runIn(){
-      intake.set(0.5);
+      intake.set(0.75);
     }
     public void runOut(){
-      intake.set(-0.5);
+      intake.set(-0.75);
     }
     public void stop(){
       intake.set(0);

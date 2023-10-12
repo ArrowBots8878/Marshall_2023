@@ -13,6 +13,8 @@ public class IntakeOutCommand extends CommandBase {
 
   /** Creates a new IntakeOutCommand. */
   public IntakeOutCommand(Intake intake) {
+    m_intake = intake;
+
     addRequirements(m_intake);
     // Use addRequirements() here to declare subsystem dependencies.
   }
