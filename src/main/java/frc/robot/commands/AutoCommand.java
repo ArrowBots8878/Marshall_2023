@@ -14,15 +14,13 @@ import frc.robot.subsystems.Paddle;
 public class AutoCommand extends SequentialCommandGroup {
   private Drivertrain m_driveTrain; 
   private ArmElevator m_elevator;
-  private ArmExtension m_extension;
-  private Paddle m_paddle;
+
   /** Creates a new SampleAutoCommand. */
-  public AutoCommand(Drivertrain driveTrain, ArmElevator elevator, ArmExtension extension, Paddle paddle) {
+  public AutoCommand(Drivertrain driveTrain, ArmElevator elevator) {
     // Use addRequirements() here to declare subsystem dependencies.
     m_driveTrain = driveTrain;
     m_elevator = elevator;
-    m_extension = extension;
-    m_paddle = paddle;
+ 
 
         this.addCommands(new DriveWithJoy(() -> -.75, () -> 0, m_driveTrain).withTimeout(1.5));
     this.addCommands(new AutoBalanceAlternate(m_driveTrain));
