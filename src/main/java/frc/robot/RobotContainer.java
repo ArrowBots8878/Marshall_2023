@@ -189,9 +189,9 @@ public void setCoast(){
     // The selected command will be run in autonomous
 
 if (autoChooser.getSelected().toString().equals("CenterBalance"))
-    return new AutoCommand(m_drivertrain, m_armElevator);
+    return new AutoCommand(m_drivertrain, m_armElevator, m_intake);
 else if(autoChooser.getSelected().equals("CableSideAuto"))
-     return new CableSideAuto(m_drivertrain, m_armElevator);
+     return new CableSideAuto(m_drivertrain, m_armElevator, m_intake);
 else if(autoChooser.getSelected().equals("OverAndBackAuto"))
      return new OverAndBackAuto(m_drivertrain, m_armElevator, m_intake);
 
